@@ -29,7 +29,7 @@ class mqConsumer(mqConsumerInterface):
         self.channel.queue_declare(self.queue_name)
 
         # Create the exchange if not already present
-        self.channel.exchange_declare(self.exchange_name)
+        self.channel.exchange_declare(self.exchange_name, exchange_type=pika.exchange_type.ExchangeType.topic)
 
         # Bind Binding Key to Queue on the exchange
         self.channel.queue_bind(
