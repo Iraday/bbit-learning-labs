@@ -40,7 +40,7 @@ class mqProducer:
         self.channel.basic_publish(
             exchange=self.exchange_name,
             routing_key=self.routing_key,
-            body="Message 1",
+            body=message,
         )
 
     def __del__(self):
