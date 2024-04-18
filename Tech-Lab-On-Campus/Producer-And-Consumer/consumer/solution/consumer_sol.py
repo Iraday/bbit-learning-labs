@@ -52,7 +52,7 @@ class mqConsumer(mqConsumerInterface):
 
 
         #Print message (The message is contained in the body parameter variable)
-        print(body.message)
+        print(body)
 
 
     def startConsuming(self) -> None:
